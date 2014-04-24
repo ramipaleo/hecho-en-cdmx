@@ -5,7 +5,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ui.bootstrap'
   ])
   .config ($routeProvider) ->
     $routeProvider
@@ -14,4 +15,3 @@ angular
         controller: 'MainCtrl'
       .otherwise
         redirectTo: '/'
-
