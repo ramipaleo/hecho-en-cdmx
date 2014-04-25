@@ -1,0 +1,18 @@
+/* mixins */
+@mixin alter-bg($color, $text-color, $opacity) {
+    background-color: $color;
+    background-color: rgba($color, $opacity);
+    color: $text-color;
+
+    a {
+        color: $text-color;
+    }
+}
+
+@mixin darken-bg($opacity: 0.75) {
+    @include alter-bg($dark, $light, $opacity);
+}
+
+@mixin lighten-bg($opacity: 0.75) {
+    @include alter-bg($light, $dark, $opacity);
+}

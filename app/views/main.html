@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h1>Hecho en <strong>#CDMX</strong></h1>
+      <p>Chilango y orgulloso. Coloca una de las siguientes insignias en tu sitio para presumir que estás hecho en la Ciudad de México.</p>
+    </div>
+  </div>
+  <div id="light-badges" class="col-md-6 text-center">
+    <div>
+      <div class="cdmx-badge" ng-click="openCodeModal($event)">
+        Hecho con <span class="heart">&hearts;</span> en <b>#CDMX</b>
+      </div>
+    </div>
+
+    <div>
+      <span class="cdmx-badge" ng-click="openCodeModal($event)">
+        <img src="http://i.imgur.com/MG38Gap.png">
+      </span>
+    </div>
+
+    <div>
+      <span class="cdmx-badge" ng-click="openCodeModal($event)">
+        <img src="http://i.imgur.com/GLhKnuo.png">
+      </span>
+    </div>
+
+    <div>
+      <span class="cdmx-badge" ng-click="openCodeModal($event)">
+        <img src="http://i.imgur.com/jrxIRHx.png">
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Modals as ng-templates -->
+<script type="text/ng-template" id="getCodeModal.html">
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="closeCodeModal()">&times;</button>
+    <h4 class="modal-title">Código de insignias</h4>
+  </div>
+  <div class="modal-body">
+    <div class="code-snippet">
+      <textarea class="form-control" rows="5" readonly ng-show="code.isText">
+&lt;a href="http://hechoencd.mx"&gt;
+  Hecho con &lt;span style="color: #E74C3C; font-size: 125%;"&gt;&amp;hearts;&lt;/span&gt; en &lt;b&gt;#CDMX&lt;/b&gt;
+&lt;/a&gt;</textarea>
+      <textarea class="form-control" rows="5" readonly ng-hide="code.isText">
+&lt;a href="http://hechoencd.mx"&gt;
+  &lt;img src="{{code.badgeURL}}" style="border: 0px;"&gt;
+&lt;/a&gt;</textarea>
+    </div>
+  </div>
+</script>
