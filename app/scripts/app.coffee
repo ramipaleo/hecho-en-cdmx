@@ -6,7 +6,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngRoute',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngClipboard'
   ])
   .config ($routeProvider) ->
     $routeProvider
@@ -15,3 +16,6 @@ angular
         controller: 'MainCtrl'
       .otherwise
         redirectTo: '/'
+  .config ['ngClipProvider', (ngClipProvider) ->
+    ngClipProvider.setPath 'bower_components/zeroclipboard/ZeroClipboard.swf'
+  ]
