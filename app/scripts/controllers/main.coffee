@@ -26,3 +26,7 @@ angular.module('cdmxApp')
     $scope.code = code
     $scope.closeCodeModal = ->
       $modalInstance.dismiss 'cancel'
+
+    # Zeroclipboard thing
+    $scope.getTextToCopy = ->
+      $('.form-control.active').val()

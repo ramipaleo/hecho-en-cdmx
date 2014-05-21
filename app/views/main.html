@@ -40,14 +40,18 @@
   </div>
   <div class="modal-body">
     <div class="code-snippet">
-      <textarea class="form-control" rows="5" readonly ng-show="code.isText">
+      <textarea class="form-control" ng-class="{active: code.isText}" rows="5" readonly ng-show="code.isText">
 &lt;a href="http://hechoencd.mx"&gt;
   Hecho con &lt;span style="color: #E74C3C; font-size: 125%;"&gt;&amp;hearts;&lt;/span&gt; en &lt;b&gt;#CDMX&lt;/b&gt;
 &lt;/a&gt;</textarea>
-      <textarea class="form-control" rows="5" readonly ng-hide="code.isText">
+      <textarea class="form-control" ng-class="{active: !code.isText}" rows="5" readonly ng-hide="code.isText">
 &lt;a href="http://hechoencd.mx"&gt;
   &lt;img src="{{code.badgeURL}}" style="border: 0px;"&gt;
 &lt;/a&gt;</textarea>
     </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="closeCodeModal()">Cerrar</button>
+    <button type="button" class="btn btn-primary" clip-copy="getTextToCopy()" clip-click="">Copiar código</button>
   </div>
 </script>
