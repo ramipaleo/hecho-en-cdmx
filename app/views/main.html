@@ -52,6 +52,6 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-default" ng-click="closeCodeModal()">Cerrar</button>
-    <button type="button" class="btn btn-primary" clip-copy="getTextToCopy()" clip-click="">Copiar código</button>
+    <button type="button" class="btn btn-copy" ng-class="{'btn-primary': !copied, 'btn-success': copied}" clip-copy="getTextToCopy()" clip-click="doAfterCopy()">{{copyText}}</button>
   </div>
 </script>
