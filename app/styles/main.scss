@@ -55,11 +55,54 @@ body {
     display:                block;
     position:               absolute;
     z-index:                1;
-    background:             transparent url('http://i.imgur.com/obgFea9.jpg') center center no-repeat;
-    background-size:        cover;
+    /*background:             transparent url('http://i.imgur.com/obgFea9.jpg') center center no-repeat;*/
     /* background position when .fullscreen-img overflows */
     background-position:    50% 50%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
 }
+
+.fullscreen-img.opaque{
+    opacity:1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+.fullscreen-img.item-1{
+    background:             transparent url('http://i.imgur.com/obgFea9.jpg') center center no-repeat;
+    background-size:        cover;
+}
+
+.fullscreen-img.item-2{
+    background:             transparent url('https://farm3.staticflickr.com/2318/1634413426_c1cc805362_b.jpg') center center no-repeat;
+    background-size:        cover;
+}
+
+.fullscreen-img.item-3{
+    background:             transparent url('https://farm5.staticflickr.com/4147/5211967560_7d92b4614f_b.jpg') center center no-repeat;
+    background-size:        cover;
+}
+
+.fullscreen-img.item-4{
+    background:             transparent url('https://farm4.staticflickr.com/3230/2406948598_0195e1e3b4_b.jpg') center center no-repeat;
+    background-size:        cover;
+}
+
+.fullscreen-img.item-5{
+    background:             transparent url('https://farm3.staticflickr.com/2414/2141999634_0977ac810b_b.jpg') center center no-repeat;
+    background-size:        cover;
+}
+
+.fullscreen-img.item-6{
+    background:             transparent url('https://farm2.staticflickr.com/1440/1464042006_145ae26366_b.jpg') center center no-repeat;
+    background-size:        cover;
+}
+
 
 .content {
     display:            block;
