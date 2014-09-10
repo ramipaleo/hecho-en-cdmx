@@ -33,7 +33,8 @@ if(empty($request->inputMessage)){
 
 if(isset($request->inputName) && isset($request->inputEmail) && isset($request->inputMessage)) {
 
-	$to = "contacto@hechoencd.mx";
+	//$to = "contacto@hechoencd.mx";
+	$to = "ramiro.pacheco@manoderecha.mx";
 
 	$headers = "Content-Type: text/html; charset=UTF-8\n";
 	$headers .= "From: " . strip_tags($request->inputName) . " " . strip_tags($request->inputEmail) . "\r\n";
@@ -41,7 +42,11 @@ if(isset($request->inputName) && isset($request->inputEmail) && isset($request->
 
 	$tema = "Mensaje desde el sitio Hecho en #CDMX";
 
-	$mensaje = $request->inputMessage;	
+	$mensaje = "<table>";
+	$mensaje =   "<tr><td>Nombre: </td><td>" . strip_tags($request->inputName) . "</td></tr>";
+	$mensaje .=  "<tr><td>Correo: </td><td>" . strip_tags($request->inputEmail) . "</td></tr>";
+	$mensaje .=  "<tr><td>Mensaje: </td><td>" . strip_tags($request->inputMessage) . "</td></tr>";
+	$mensjae .= "</table>";	
 
 	if(!mail($to,$tema,$mensaje,$headers)) {
 	    $data = array('success' => false, 'message' => 'No se pudo enviar tu mensaje. Inténtalo más tarde.');
