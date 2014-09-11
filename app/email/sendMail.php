@@ -3,42 +3,12 @@
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 
-/*
-if(empty($request->inputName)){
-	$data = array('success' => false, 'message' => 'Ingresa tu nombre');
-	echo json_encode($data);
-	exit;
-}
-
-if(empty($request->inputEmail)){
-	$data = array('success' => false, 'message' => 'Ingresa tu correo electrónico');
-	echo json_encode($data);
-	exit;
-}
-
-if(preg_match("/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/",$request->inputEmail)) {
-	$data = array('success' => false, 'message' => 'Correo electrónico Inválido');
-	echo json_encode($data);
-	exit;
-}
-
-
-if(empty($request->inputMessage)){
-	$data = array('success' => false, 'message' => 'Ingresa tu mensaje');
-	echo json_encode($data);
-	exit;
-}
-
-*/
-
 if(isset($request->inputName) && isset($request->inputEmail) && isset($request->inputMessage)) {
 
-	//$to = "contacto@hechoencd.mx";
-	$to = "ramiro.pacheco@manoderecha.mx";
+	$to = "contacto@hechoencd.mx";
 
 	$headers = "Content-Type: text/html; charset=UTF-8\n";
 	$headers .= "From: " . strip_tags($request->inputName) . " " . strip_tags($request->inputEmail) . "\r\n";
-	//$headers .= "Cc: ". strip_tags($request->inputName) . " " . strip_tags($request->inputEmail) . "\r\n";
 
 	$tema = "Mensaje desde el sitio Hecho en #CDMX";
 
