@@ -43,7 +43,44 @@ angular.module('cdmxApp')
             return $scope.code
 
 
+  .controller 'ContactCtrl', ($scope, $modal) ->
+    $scope.openContactModal = (e) ->
+      modalInstance = $modal.open
+        templateUrl: 'getContactModal.html'
+        controller:  'CodeModalCtrl'
+        resolve:
+          code: ->
+            return $scope.code
+    return
 
+  .controller 'ContactFormCtrl', ($scope, $http) ->
+    $scope.result = 'hidden'
+    $scope.resultMessage  
+    $scope.formData
+    $scope.submitButtonDisabled = false
+    $scope.submitted = false
+
+    $scope.submit = ->
+      $http({
+        method  : 'POST'
+        url     : 'email/sendMail.php'
+        data    : $scope.contact
+        header  : { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }).success((data)->
+        if data.success
+          $scope.submitButtonDisabled = true
+          $scope.resultMessage = data.message
+          $scope.result = 'bg-success'
+          contactForm.reset()
+          return
+        else
+          $scope.submitButtonDisabled = false
+          $scope.resultMessage = data.message
+          $scope.result = 'bg-danger'
+          return
+      )
+      return
+    return
 
 
 angular.module('cdmxApp')

@@ -31,8 +31,9 @@
 
         <footer>
           <div class="row">
-            <div class="col-xs-3 col-sm-4 center-xs center-sm text-left">
-              Por <a href="http://vincoorbis.com">Vinco Orbis</a>
+            <div class="col-xs-3 col-sm-4 center-xs center-sm text-left" ng-controller="ContactCtrl">
+              <a href="" ng-click="openContactModal($event)" class="contact"><span class="glyphicon glyphicon-envelope"></span> Escríbenos</a>
+              <p>Por <a href="http://vincoorbis.com">Vinco Orbis</a></p>
             </div>
 
             <div class="col-xs-6 col-sm-4 text-center">
@@ -49,6 +50,47 @@
         </footer>
       </div>
     </div>
+
+    <!-- Contact modal -->
+    <script type="text/ng-template" id="getContactModal.html">
+    <div ng-controller="ContactFormCtrl" class="panel-body contactModal">
+      <form name="contactForm" class="form-horizontal">
+        <div class="modal-header">
+          <button type="button" class="close" ng-click="closeCodeModal()">&times;</button>
+          <h4 class="modal-title">Contáctanos</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="inputName" class="control-label">Nombre</label>
+            <input ng-model="contact.inputName" type="text" class="form-control" id="inputName" name="inputName" required>
+            <div ng-show="contactForm.inputName.$error.required && contactForm.inputName.$dirty">
+              <p class="text-danger">Campo obligatorio</p>
+            </div>                  
+          </div>
+          <div class="form-group">
+            <label for="inputEmail" class="control-label">Email</label>
+            <input ng-model="contact.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" required>
+            <div ng-show="contactForm.inputEmail.$dirty && contactForm.inputEmail.$invalid">
+              <p class="text-danger" ng-show="contactForm.inputEmail.$error.required">Campo obligatorio</p>
+              <p class="text-danger" ng-show="contactForm.inputEmail.$error.email">Email inválido</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputMessage" class="control-label">Mensaje</label>
+            <textarea ng-model="contact.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" required></textarea>
+            <div ng-show="contactForm.inputMessage.$error.required && contactForm.inputMessage.$dirty">
+              <p class="text-danger">Campo obligatorio</p>
+            </div> 
+          </div>                
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" ng-click="closeCodeModal()">Cerrar</button>
+          <button type="submit" class="btn btn-primary" ng-disabled="contactForm.$invalid" ng-click="submit()">Enviar mensaje</button>
+        </div>
+      </form>
+      <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+    </div> 
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
