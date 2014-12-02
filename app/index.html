@@ -48,8 +48,9 @@
             </div>
 
             <div class="col-xs-3 col-sm-4 center-xs center-sm text-right">
-              Fotografía de <a href="https://www.flickr.com/photos/psicoloco/11926669523/"
-                title="México City @ Flickr">Alex Torres</a>
+              <div ng-repeat="author in authors" class="authorbg" ng-class="{ authorbgDisplay : $index == authorItem }">
+                Fotografía de <a href="{{author.url}}" title="{{author.title}}" target="_blank">{{author.name}}</a>
+              </div>
             </div>
           </div>
         </footer>
