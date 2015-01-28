@@ -191,6 +191,8 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
+          httpImagesPath: 'http://hechoencd.mx/images',
+          httpGeneratedImagesPath: 'http://hechoencd.mx/images/generated',
           generatedImagesDir: '<%= yeoman.dist %>/images/generated'
         }
       },

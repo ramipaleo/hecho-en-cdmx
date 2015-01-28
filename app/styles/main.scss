@@ -79,98 +79,98 @@ body {
 }
 
 .fullscreen-img.item-1{
-    background:             transparent url('../images/bg/imagebg-1.jpg') center center no-repeat;
+    background:             transparent image-url('bg/imagebg-1.jpg') center center no-repeat;
 
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-        background:             transparent url('../images/bg/md/imagebg-md-1.jpg') center center no-repeat;
+        background:             transparent image-url('bg/md/imagebg-md-1.jpg') center center no-repeat;
     }
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        background:             transparent url('../images/bg/sm/imagebg-sm-1.jpg') center center no-repeat;
+        background:             transparent image-url('bg/sm/imagebg-sm-1.jpg') center center no-repeat;
     }
 
     @media (max-width: $screen-xs-max) {
-        background:             transparent url('../images/bg/xs/imagebg-xs-1.jpg') center center no-repeat;
+        background:             transparent image-url('bg/xs/imagebg-xs-1.jpg') center center no-repeat;
     }
 }
 
 .fullscreen-img.item-2{
-    background:             transparent url('../images/bg/imagebg-2.jpg') center center no-repeat;
+    background:             transparent image-url('bg/imagebg-2.jpg') center center no-repeat;
 
      @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-        background:             transparent url('../images/bg/md/imagebg-md-2.jpg') center center no-repeat;
+        background:             transparent image-url('bg/md/imagebg-md-2.jpg') center center no-repeat;
     }
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        background:             transparent url('../images/bg/sm/imagebg-sm-2.jpg') center center no-repeat;
+        background:             transparent image-url('bg/sm/imagebg-sm-2.jpg') center center no-repeat;
     }
 
     @media (max-width: $screen-xs-max) {
-        background:             transparent url('../images/bg/xs/imagebg-xs-2.jpg') center center no-repeat;
+        background:             transparent image-url('bg/xs/imagebg-xs-2.jpg') center center no-repeat;
     }
 }
 
 .fullscreen-img.item-3{
-    background:             transparent url('../images/bg/imagebg-3.jpg') center center no-repeat;
+    background:             transparent image-url('bg/imagebg-3.jpg') center center no-repeat;
 
     @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-        background:             transparent url('../images/bg/md/imagebg-md-3.jpg') center center no-repeat;
+        background:             transparent image-url('bg/md/imagebg-md-3.jpg') center center no-repeat;
     }
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        background:             transparent url('../images/bg/sm/imagebg-sm-3.jpg') center center no-repeat;
+        background:             transparent image-url('bg/sm/imagebg-sm-3.jpg') center center no-repeat;
     }
 
     @media (max-width: $screen-xs-max) {
-        background:             transparent url('../images/bg/xs/imagebg-xs-3.jpg') center center no-repeat;
+        background:             transparent image-url('bg/xs/imagebg-xs-3.jpg') center center no-repeat;
     }
 }
 
 .fullscreen-img.item-4{
-    background:             transparent url('../images/bg/imagebg-4.jpg') center center no-repeat;
+    background:             transparent image-url('bg/imagebg-4.jpg') center center no-repeat;
 
      @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-        background:             transparent url('../images/bg/md/imagebg-md-4.jpg') center center no-repeat;
+        background:             transparent image-url('bg/md/imagebg-md-4.jpg') center center no-repeat;
     }
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        background:             transparent url('../images/bg/sm/imagebg-sm-4.jpg') center center no-repeat;
+        background:             transparent image-url('../images/bg/sm/imagebg-sm-4.jpg') center center no-repeat;
     }
 
     @media (max-width: $screen-xs-max) {
-        background:             transparent url('../images/bg/xs/imagebg-xs-4.jpg') center center no-repeat;
+        background:             transparent image-url('bg/xs/imagebg-xs-4.jpg') center center no-repeat;
     }
 }
 
 .fullscreen-img.item-5{
-    background:             transparent url('../images/bg/imagebg-5.jpg') center center no-repeat;
+    background:             transparent image-url('bg/imagebg-5.jpg') center center no-repeat;
 
      @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-        background:             transparent url('../images/bg/md/imagebg-md-5.jpg') center center no-repeat;
+        background:             transparent image-url('bg/md/imagebg-md-5.jpg') center center no-repeat;
     }
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        background:             transparent url('../images/bg/sm/imagebg-sm-5.jpg') center center no-repeat;
+        background:             transparent image-url('bg/sm/imagebg-sm-5.jpg') center center no-repeat;
     }
 
     @media (max-width: $screen-xs-max) {
-        background:             transparent url('../images/bg/xs/imagebg-xs-5.jpg') center center no-repeat;
+        background:             transparent image-url('bg/xs/imagebg-xs-5.jpg') center center no-repeat;
     }
 }
 
 .fullscreen-img.item-6{
-    background:             transparent url('../images/bg/imagebg-6.jpg') center center no-repeat;
+    background:             transparent image-url('bg/imagebg-6.jpg') center center no-repeat;
 
      @media (min-width: $screen-md-min) and (max-width: $screen-md-max){
-        background:             transparent url('../images/bg/md/imagebg-md-6.jpg') center center no-repeat;
+        background:             transparent image-url('bg/md/imagebg-md-6.jpg') center center no-repeat;
     }
 
     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        background:             transparent url('../images/bg/sm/imagebg-sm-6.jpg') center center no-repeat;
+        background:             transparent image-url('bg/sm/imagebg-sm-6.jpg') center center no-repeat;
     }
 
     @media (max-width: $screen-xs-max) {
-        background:             transparent url('../images/bg/xs/imagebg-xs-6.jpg') center center no-repeat;
+        background:             transparent image-url('bg/xs/imagebg-xs-6.jpg') center center no-repeat;
     }
 }
 
